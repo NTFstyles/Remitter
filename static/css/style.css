@@ -1,0 +1,259 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+a {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== LOGIN AND SIGNUP PAGES ===== */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.auth-card {
+    background-color: white;
+    width: 100%;
+    max-width: 440px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4f46e5;
+    margin-bottom: 25px;
+}
+
+.auth-card h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ===== FORM FIELDS ===== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+/* ===== BUTTONS ===== */
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #3730a3;
+}
+
+/* ===== VALIDATION ERRORS ===== */
+
+.error {
+    display: block;
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+/* ===== LINKS BELOW FORMS ===== */
+
+.auth-footer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.8;
+}
+
+/* ===== HOME PAGE ===== */
+
+.home-page {
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar .logo {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-links .nav-button {
+    background-color: #4f46e5;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+}
+
+.nav-links .nav-button:hover {
+    background-color: #3730a3;
+    text-decoration: none;
+}
+
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 110px 25px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+    color: #0f172a;
+}
+
+.hero h1 span {
+    color: #4f46e5;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 9px;
+    background-color: #4f46e5;
+    color: white;
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background-color: #3730a3;
+    text-decoration: none;
+}
+
+.home-footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 25px 20px;
+    }
+
+    .auth-card h1 {
+        font-size: 23px;
+    }
+
+    .navbar {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .navbar .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-links .nav-button {
+        padding: 9px 12px;
+    }
+
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+

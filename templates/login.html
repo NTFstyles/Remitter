@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Remitter</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <div class="auth-card">
+
+            <div class="logo">Remitter</div>
+
+            <h1>Welcome back!</h1>
+
+            <p class="subtitle">
+                Sign in to your account and continue your journey with us.
+            </p>
+
+            <form method="post"
+                  novalidate
+                  action="{{ url_for('login') }}">
+
+                {{ form.csrf_token }}
+
+                <div class="form-group">
+                    {{ form.email.label(class="form-label") }}
+
+                    {{ form.email(class="form-input",
+                                  placeholder="Enter your email") }}
+
+                    {% for e in form.email.errors %}
+                        <span class="error">{{ e }}</span>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password.label(class="form-label") }}
+
+                    {{ form.password(class="form-input",
+                                     placeholder="Enter your password") }}
+
+                    {% for e in form.password.errors %}
+                        <span class="error">{{ e }}</span>
+                    {% endfor %}
+                </div>
+
+                {{ form.submit(class="submit-btn", value="Sign In") }}
+
+            </form>
+
+            <p class="auth-footer">
+                New to Remitter?
+                <a href="{{ url_for('signin') }}">
+                    Create an account
+                </a>
+            </p>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+

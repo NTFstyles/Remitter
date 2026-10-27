@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Remitter | Grow Your Digital Presence</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="home-page">
+
+        <header class="navbar">
+
+            <div class="logo">Remitter</div>
+
+            <nav class="nav-links">
+                <a href="{{ url_for('login') }}">Login</a>
+
+                <a class="nav-button"
+                   href="{{ url_for('signin') }}">
+                    Get Started
+                </a>
+            </nav>
+
+        </header>
+
+        <main class="hero">
+
+            <h1>
+                Grow Your Business.
+                <span>Build Your Presence.</span>
+            </h1>
+
+            <p>
+                Welcome to Remitter, a platform focused on business reviews,
+                social media engagement, and affiliate marketing.
+                Connect, engage, and discover new opportunities.
+            </p>
+
+            <a class="hero-button"
+               href="{{ url_for('signin') }}">
+                Create Your Account
+            </a>
+
+        </main>
+
+        <footer class="home-footer">
+            &copy; 2026 Remitter. All rights reserved.
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
